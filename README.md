@@ -71,9 +71,10 @@ When a user asks a question:
 
 ### Frontend
 
-- React
-- Vite
-- Tailwind CSS
+- React 19
+- Vite 8
+- Oxlint for linting
+- Tailwind CSS (planned - not installed yet)
 
 ### Backend
 
@@ -126,7 +127,17 @@ Each stored document chunk contains metadata identifying its original source so 
 RAG_PROJECT/
 │
 ├── frontend/
-│   └── React application
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── .oxlintrc.json
+│   ├── public/
+│   └── src/
+|       ├──assets
+        │  └── toledo.png
+│       ├── main.jsx
+│       ├── App.jsx
+│       └── index.css
 │
 ├── backend/
 │   ├── main.py
@@ -141,6 +152,27 @@ RAG_PROJECT/
 ```
 
 The project structure may change as development progresses.
+
+## Getting Started
+
+### Frontend
+
+The frontend is a React + Vite app in `frontend/`. It is currently a minimal template that renders a placeholder page.
+
+Requires Node.js 20.19+ or 22.12+.
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Available scripts:
+
+- `npm run dev` - start the Vite dev server with hot module reloading
+- `npm run build` - build for production into `frontend/dist/`
+- `npm run preview` - serve the production build locally
+- `npm run lint` - lint the code with Oxlint
 
 ## Retrieval
 
